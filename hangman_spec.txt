@@ -1,0 +1,3 @@
+lines 1-3 determine the secret word (in this case "dog") length. So, test lines 10-13 reflect that function and pass. 
+lines 5-11 iterates through each of the letters of the secret word (dog) and converts those characters into blank spaces (underscores). Lines 15-23 in the test case reflect this function and pass. 
+ 	so -word_setup(secret_word).times do-  is the same as -3.times do- because dog is three characters. 

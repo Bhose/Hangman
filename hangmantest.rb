@@ -22,6 +22,11 @@ class TestHangman < Minitest::Test
 		assert_equal(["_","_","_","_","_","_"], word_blanks(secret_word))
 	end
 
+	def test_assert_that_abcdefghijklmnopqrstuvwxyz_returns_hooray
+		secret_word = "abcdefghijklmnopqrstuvwxyz"
+		assert_equal("hooray", letter_match(secret_word))
+	end
+
 
 
 end
