@@ -7,25 +7,42 @@ class TestHangman < Minitest::Test
 		assert_equal(1, 1)
 	end
 
-	def test_assert_that_dog_length_is_3
+	# def test_assert_that_dog_length_is_3
+	# 	secret_word = "dog"
+	# 	assert_equal(3, word_setup(secret_word))
+	# end
+
+	# def test_assert_that_dog_is_3_underscores
+	# 	secret_word = "dog"
+	# 	assert_equal(["_","_","_"], word_blanks(secret_word))
+	# end
+
+	# def test_assert_that_wombat_is_6_underscores
+	# 	secret_word = "wombat"
+	# 	assert_equal(["_","_","_","_","_","_"], word_blanks(secret_word))
+	# end
+
+	# def test_assert_that_abcdefghijklmnopqrstuvwxyz_returns_hooray
+	# 	secret_word = "abcdefghijklmnopqrstuvwxyz"
+	# 	assert_equal("hooray", letter_match(secret_word))
+	# end
+
+	# def test_assert_that_letter_o_returns_hooray
+	# 	secret_word = "dog"
+	# 	assert_equal("hooray", letter_match(secret_word))
+	# end
+
+	# def test_assert_that_letter_u_returns_try_again
+	# 	secret_word = "dog"
+	# 	assert_equal("try again", letter_match(secret_word))
+	# end
+
+	def test_assert_that_d_is_in_dog
 		secret_word = "dog"
-		assert_equal(3, word_setup(secret_word))
+		letter_guess = "d"
+		assert_equal(["d", "_", "_"], letter_match(secret_word, letter_guess))
 	end
 
-	def test_assert_that_dog_is_3_underscores
-		secret_word = "dog"
-		assert_equal(["_","_","_"], word_blanks(secret_word))
-	end
-
-	def test_assert_that_wombat_is_6_underscores
-		secret_word = "wombat"
-		assert_equal(["_","_","_","_","_","_"], word_blanks(secret_word))
-	end
-
-	def test_assert_that_abcdefghijklmnopqrstuvwxyz_returns_hooray
-		secret_word = "abcdefghijklmnopqrstuvwxyz"
-		assert_equal("hooray", letter_match(secret_word))
-	end
 
 
 
