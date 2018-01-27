@@ -17,7 +17,10 @@ class TestHangman < Minitest::Test
 		assert_equal(["_","_","_"], word_blanks(secret_word))
 	end
 
-
+	def test_assert_that_wombat_is_6_underscores
+		secret_word = "wombat"
+		assert_equal(["_","_","_","_","_","_"], word_blanks(secret_word))
+	end
 
 
 
