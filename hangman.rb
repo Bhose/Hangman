@@ -21,21 +21,21 @@ def letter_match(secret_word, letter_guess)
 	#assuming secret word is now array
 	updated_array = word_blanks(secret_word)
 	#creating variable to store array from prev function
-	if letter_guess == secret_word[0]
+	array_counter = 0
+	word_length = word_setup(secret_word)
+	until array_counter == word_length
+		if letter_guess == secret_word[array_counter]
 		#letter_guess is "d" equals "d" then push into updated array
-		updated_array[0] = letter_guess
-	end
-	if letter_guess == secret_word[1]
-		updated_array[1] = letter_guess
-	end
-	if letter_guess == secret_word[2]
-		updated_array[2] = letter_guess
-	end
-	
+		updated_array[array_counter] = letter_guess
+		end
+	array_counter +=1
+	end	
 	updated_array
 end
 
+def correct_guess(secret_word, letter_guess)
 
+end
 
 
 
