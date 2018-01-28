@@ -1,5 +1,5 @@
 letters = [*('a'..'z')]
-# $blanks = []
+
 
 
 def word_setup(secret_word)
@@ -14,10 +14,11 @@ def word_blanks(secret_word)
 	blanks
 end
 
-puts "Guess a letter!"
-guess = gets.chomp
+
 
 def letter_match(secret_word, letter_guess)
+	puts "Guess a letter!"
+	letter_guess = gets.chomp
 	secret_word = secret_word.split('')
 	#assuming secret word is now array
 	updated_array = word_blanks(secret_word)
@@ -28,7 +29,7 @@ def letter_match(secret_word, letter_guess)
 	end
 	updated_array
 end
-# $blanks
+
 
 
 
