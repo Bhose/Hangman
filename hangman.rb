@@ -35,6 +35,14 @@ end
 
 
 def wrong_guess_tracker(secret_word, letter_guess)
+	wrong_counter = 0
+	# secret_word = secret_word.split('')
+	# until wrong_counter = 6
+	letter_match(secret_word, letter_guess)
+		if secret_word.include?(letter_guess) == false
+		wrong_counter += 1
+		end
+	wrong_counter
 
 end
 
