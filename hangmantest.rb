@@ -34,4 +34,10 @@ class TestHangman < Minitest::Test
 		assert_equal(["_", "o", "_"], letter_match(secret_word, letter_guess))
 	end
 
+	def test_assert_that_g_is_in_dog
+		secret_word = "dog"
+		letter_guess = "g"
+		assert_equal(["_", "_", "g"], letter_match(secret_word, letter_guess))
+	end
+
 end

@@ -15,8 +15,8 @@ def word_blanks(secret_word)
 end
 
 def letter_match(secret_word, letter_guess)
-	puts "Guess a letter!"
-	letter_guess = gets.chomp
+	# puts "Guess a letter!"
+	# letter_guess = gets.chomp
 	secret_word = secret_word.split('')
 	#assuming secret word is now array
 	updated_array = word_blanks(secret_word)
@@ -27,6 +27,9 @@ def letter_match(secret_word, letter_guess)
 	end
 	if letter_guess == secret_word[1]
 		updated_array[1] = letter_guess
+	end
+	if letter_guess == secret_word[2]
+		updated_array[2] = letter_guess
 	end
 	
 	updated_array
