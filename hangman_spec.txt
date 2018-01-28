@@ -1,3 +1,4 @@
 lines 1-3 determine the secret word (in this case "dog") length. So, test lines 10-13 reflect that function and pass. 
 lines 5-11 iterates through each of the letters of the secret word (dog) and converts those characters into blank spaces (underscores). Lines 15-23 in the test case reflect this function and pass. 
  	so -word_setup(secret_word).times do-  is the same as -3.times do- because dog is three characters. 
+ Lines 17-34 split the secret word that is passed through, into an array. The individual letters are then compared to the letter guess that is passed through. If the guessed letter matches one of the letters in the secret word, 1 is added to the array counter. The array counter will be added to for however many characters are in the secret word- example: dog has 3 characters, the array counter will have 3 positions. The updated array is printed at the end with the correctly guessed letter replacing the underscore in the correct position of the array. 
