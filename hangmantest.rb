@@ -46,4 +46,11 @@ class TestHangman < Minitest::Test
 		assert_equal(["_", "_", "_"], letter_match(secret_word, letter_guess))
 	end
 
+	def test_assert_that_wrong_guess_adds_1_to_wrong_counter
+		secret_word = "dog"
+		letter_guess = "f"
+		assert_equal(1, wrong_guess_tracker(secret_word, letter_guess))
+	end
+
+
 end
