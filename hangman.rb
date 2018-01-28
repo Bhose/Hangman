@@ -1,15 +1,17 @@
 letters = [*('a'..'z')]
-$blanks = []
+# $blanks = []
+
 
 def word_setup(secret_word)
 	secret_word.length
 end
 
 def word_blanks(secret_word)
+	blanks = []
 	word_setup(secret_word).times do
 	blanks.push("_")	
 	end
-	$blanks
+	blanks
 end
 
 puts "Guess a letter!"
@@ -17,10 +19,16 @@ guess = gets.chomp
 
 def letter_match(secret_word, letter_guess)
 	secret_word = secret_word.split('')
+	#assuming secret word is now array
+	updated_array = word_blanks(secret_word)
+	#creating variable to store array from prev function
 	if letter_guess == secret_word[0]
-		$blanks[0] = letter_guess
+		#letter_guess is "d" equals "d" then push into updated array
+		updated_array[0] = letter_guess
 	end
+	updated_array
 end
+# $blanks
 
 
 
@@ -42,12 +50,4 @@ end
 # 		return "try again"
 # 	end
 # end
-
-
-
-# puts "Please guess a letter!"
-# puts
-# guess = letters.sample
-# puts guess
-# puts
 
